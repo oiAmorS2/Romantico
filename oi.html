@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convite romantico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            background-color: #710413;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        span {
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+            font-size: 100px;
+        }
+
+        button {
+            display: inline-block;
+            outline: none;
+            cursor: pointer;
+            font-size: 32px;
+            line-height: 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 28px 48px;
+            border: none;
+            transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+            background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span>Cuzinho hoje?</span>
+    <div>
+        <button id="sim">SIM</button>
+        <button id="nao">NÃO</button>
+    </div>
+</div>
+
+<script>
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    document.getElementById("nao").addEventListener("mouseover", (event) => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+
+        event.target.style.position = "fixed";
+
+        event.target.style.top = getRndInteger(0, h) + "px";
+        event.target.style.left = getRndInteger(0, w) + "px"
+    })
+
+    document.getElementById("sim").addEventListener("click", (event) => {
+        window.location = "https://www.youtube.com/watch?v=uwjkgChj4JU";
+    })
+</script>
+
+</body>
+</html>
